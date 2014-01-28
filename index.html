@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="autodoprava">
+    <meta name="author" content="Pali Michalek">
+    <link rel="shortcut icon" href="img/car.ico">
+
+    <title>AutoDoprava Mercedes</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        html { height: 100%; }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map-canvas { height: 250px }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAczfYitkLE2LR8rEY4seeLCFPG6a0xstc&sensor=false"></script>
+    <script type="text/javascript">
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(48.700,18.400),
+                zoom: 10
+            };
+            var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</head>
+<body>
+
+<div class="navbar-wrapper">
+    <div class="container">
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Rezervácia</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">Rezervácia:</div>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <div id="searchContainer">
+                        <form id="contact" class="form-inline" role="form">
+                            <div class="form-group">
+                                <label for="from">Odkiaľ </label>
+                                <input type="text" class="form-control inputs" id="from" placeholder="dubnica nad vahom" value="DCA">
+                            </div>
+                            <div class="form-group">
+                                <label for="to">Kam </label>
+                                <input type="text" class="form-control inputs" id="to" placeholder="bratislava" value="BA">
+                            </div>
+                            <div id="date" class="form-group">
+                                <label for="datePicker">Kedy </label>
+                                <input id="datePicker" class="form-control inputs add-on" type="text"/>
+                            </div>
+                            <div id="submit" class="btn btn-default btn-primary inputs">Zisti dostupnosť</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Carousel================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="img/vito.jpg" alt="First slide">
+        </div>
+        <div class="item">
+            <img src="img/vito2.jpg" alt="Second slide">
+        </div>
+        <div class="item">
+            <img src="img/vito3.jpg" alt="Third slide">
+        </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+<div id="map-canvas"></div>
+
+<div id="text">
+    <h1>AutoDoprava</h1>
+    <h3>+421 902 682 727<br/>
+        tibor@michalek.it</h3>
+</div>
+
+<div id="description" >
+    <h3>Preprava osôb<br/>
+        nákladov a náradia<br/>
+        cesty do cudziny<br/>ahoj</h3>
+</div>
+
+<footer>
+    <p style="text-align: center">&copy; 2014 <a href="http://cloudtech.sk/CloudTech/Home.html" rel="copyright" target="_blank">CloudTech</a></p>
+</footer>
+
+<script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript"
+        src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+        src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript"
+        src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js"></script>
+<script type="text/javascript" src="js/livevalidation.js"></script>
+<script src="js/docs.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/my.js"></script>
+
+</body>
+</html>
